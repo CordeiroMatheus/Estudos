@@ -32,6 +32,9 @@ texto - Link: Usado para criar um link clicável.
 4. - [Operações Aritméticas](#operações-aritméticas)
 5. - [Input do Usuário](#input-do-usuário)
 6. - [Constante](#constantes)
+7. - [Funções matemáticas](#funções-matemáticas)
+8. - [Números Aleatórios](#gerar-números-aleatórios)
+9. - [Métodos de String](#métodos-de-strings)
 
 ### Variáveis
 
@@ -221,7 +224,138 @@ Tem a mesma função de uma variável, porém após um valor ser atribuído ele 
 
 Declaramos com a palavra chave const:
 
-> Const ChavedeAcesso = 9310@8905 // chave de acesso sempre será esse número
+> const ChavedeAcesso = 9310@8905 // chave de acesso sempre será esse número
 
-Uma importante diferença em comparação a palavra let e var é que 
+*É sempre bom declarar o nome de uma constante em letras maiúsculas*
+
+Exemplo:
+
+> const **PI** = 3.14159
+
+### Funções Matemáticas
+
+O JavaScript oferece várias funções matemáticas integradas **através do objeto Math**. Algumas das principais funções matemáticas são:
+
+- Math.round(x): arredonda o valor da variável para o número mais próximo
+
+> let x = 3.14 <br>
+> x = Math.round(x) // x seria arredondado para 3
+
+- Math.floor(x): Também arredonda o valor da variável só que para baixo
+
+> let x = 4.75 <br>
+> x = Math.floor(x) // x seria arrendondado para 4
+
+- Math.ceil(x): Também arredonda o valor da variável só que pra cima
+
+> let x = 4.3 <br>
+> x = Math.ceil(x) // x seria arredondado para 5
+
+- Math.pow(x, y): Eleva o x por y. É uma potenciação
+
+> let x = 2 <br>
+> x = Math.pow(x, 3) // 8
+
+- Math.sqrt(x): Retorna a raiz quadrada de x
+
+> let x = 9 <br>
+> x = Math.sqrt(x) // 3
+
+- Math.abs(x): Retorna o valor absoluto de x ***basicamente abs serve para calcular a distância entre zero***, a função Math.abs() é frequentemente usada em situações onde você precisa garantir que o resultado de um cálculo seja não negativo
+
+> let x = -5 <br>
+> x = Math.abs(x) // 5
+
+- Math.max(x, y, z): Encontra o maior valor dentre vários fornecidos
+
+> let maximo = Math.max(4, 5 ,9)
+> console.log(maximo) // 9
+
+- Math.min(x, y, z): Encontra o menor valor dentre vários fornecidos
+
+> let minimo = Math.min(4, 5 ,9)
+> console.log(minimo) // 4
+
+- Math.PI: Mostra os números de PI
+
+>console.log(Os números de PI são ${Math.PI}) // 3.141592653589793
+
+Existem muitos mais outros métodos matemáticos do Javascript, porém esses são alguns dos que são mais utilizados
+
+
+### Gerar Números Aleatórios
+
+Usamos uma função matemática para gerar números aleatórios
+
+> Math.random()
+
+Math.random() normalmente gera um número decimal aleatório entre 0 e 1 porém podemos mudar isso fazendo isso:
+
+> Math.random() * 6
+
+No exemplo acima agora ele irá gerar um número entre 0 e 6, porém esse número terá uma dizima decimal muito grande, então podemos arredondar para que os números gerados sejam inteiros entre 0 e 6.
+
+> Math.round(Math.random() * 6)
+
+Agora temos um código que gera um número aleatório entre 0 e 6.
+
+E se quisessemos que este código fosse um de lados de um dado não poderia ter o valor zero(0). Para isso fazemos:
+
+> Math.floor(Math.random() * 6 + 1)
+
+***É recomendado o uso do floor neste caso***
+
+### Métodos de Strings
+
+Os métodos de strings em JavaScript são funções que podem ser chamadas em strings para realizar operações específicas. Esses métodos permitem manipular e transformar strings de várias maneiras. Alguns exemplos incluem:
+
+- Length(): Retorna o comprimento de uma string.
+
+> let texto = "Olá mundo" <br>
+> console.log("O número de caracteres é " + texto.length) // 9
+
+- CharAt(): Descrição: Retorna o caractere na posição especificada pelo índice (índice começa em zero).
+
+> let texto = "Olá mundo" <br>
+> console.log("a primeira letra é " + texto.charAt(0)) // O
+
+- IndexOf(): Retorna o índice da **primeira ocorrência** de uma substring especificada. Se não for encontrada, retorna -1 (índice começa em zero).
+
+> let texto = "Olá, mundo!"; <br>
+> console.log(texto.indexOf("mundo")); // Saída: 5
+
+- lastIndexOf(): Retorna o índice da **última ocorrência** de uma substring especificada. Se não encontrada, retorna -1 (índice começa em zero).
+
+> let nickname = "AronnaxZ" <br>
+> console.log(nickname.lastIndexOf("n")) // 4
+
+- trim(): Remove espaços em branco do início e do final de uma string. 
+
+> let texto = "    Olá, mundo!    " <br>
+> console.log(texto.trim()) // "Olá, mundo!"
+
+- toUpperCase(): Converte todos os caracteres da string para maiúsculas.
+
+> let texto = "Olá, mundo!"; <br>
+> console.log(texto.toUpperCase()); // "OLÁ, MUNDO!"
+
+- toLowerCase(): Converte todos os caracteres da string para minúsculas.
+
+> let texto = "OLÁ MUNDO" <br>
+> console.log(texto.toLowerCase()) // olá mundo
+
+- replace(searchValue, newValue): Substitui uma substring na string por uma nova substring.
+
+> let texto = "Olá, mundo!";<br>
+> let novoTexto = texto.replace("mundo", "JavaScript");<br>
+> console.log(novoTexto); // Saída: "Olá, JavaScript!"
+
+- replaceAll(searchValue, newValue) : permite substituir todas as ocorrências de uma substring ou expressão regular em uma string.
+
+>let texto = "A maçã é a fruta favorita. A maçã é saudável."; <br>
+>let novoTexto = texto.replaceAll("maçã", "banana"); <br>
+>console.log(novoTexto); // Saída: "A banana é a fruta favorita. A banana é saudável." <br>
+
+### Slice String
+
 
