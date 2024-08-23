@@ -358,4 +358,20 @@ Os métodos de strings em JavaScript são funções que podem ser chamadas em st
 
 ### Slice String
 
+A função slice em JavaScript é usada para extrair uma parte de uma string sem modificar a string original. Ela retorna uma nova string que contém os caracteres extraídos da string original. A sintaxe é:
 
+> string.slice(início, fim)
+
+- início: A posição inicial da extração. O índice começa em 0.
+
+- fim (opcional): A posição final da extração. O índice é exclusivo, ou seja, o caractere na posição fim não será incluído na nova string. Se não for especificado, slice extrai até o final da string.
+
+**Pontos importantes:**
+
+- Se início for maior que fim, slice retornará uma string vazia.
+
+- Se início for negativo, ele é tratado como um índice a partir do final da string. Por exemplo, -1 se refere ao último caractere.
+
+- Se fim for negativo, ele também é tratado como um índice a partir do final da string.
+
+### Método Chaining
