@@ -101,4 +101,30 @@ As imagens não são tecnicamente inseridas em uma página web; elas são vincul
 
 >  < img src="caminho/para/imagem.jpg" alt="Descrição da Imagem">
 
+### - Atributo alt:
+
+"alt" (alternative text) fornece um texto alternativo que será exibido caso a imagem não possa ser carregada. Esse texto também é importante para acessibilidade, pois descreve a imagem para usuários que usam leitores de tela.
+
+> < img src="imagem.jpg" alt="Descrição da imagem">
+
+### - Title:
+
+Adiciona um texto que aparece como uma dica quando o usuário passa o mouse sobre a imagem.
+
+> < img src="imagem.jpg" alt="Uma bela paisagem" title="Paisagem do pôr do sol">
+
+### - Loading:
+
+Pode ser usado para adiar o carregamento de uma imagem fora da tela até que o usuário role até ela. Os valores possíveis são lazy (adiado), eager (imediato), ou auto (comportamento padrão do navegador).
+
+
+> < img src="imagem.jpg" alt="Uma bela paisagem" loading="lazy">
+
+### - Width & Height:
+
+Especificam a largura e a altura da imagem. Esses valores podem ser definidos em pixels ou em porcentagens.
+
+> < img src="imagem.jpg" alt="Uma bela paisagem" width="500" height="300">
+
+## - Audio
 
