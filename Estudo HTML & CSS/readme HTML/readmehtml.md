@@ -126,6 +126,7 @@ Especificam a largura e a altura da imagem. Esses valores podem ser definidos em
 
 > < img src="imagem.jpg" alt="Uma bela paisagem" width="500" height="300">
 
+<<<<<<< HEAD:Estudo HTML & CSS/Estudo HTML & CSS/readme HTML/readmehtml.md
 ## Áudio
 
 A tag de áudio em HTML é usada para incorporar arquivos de áudio em uma página web. Ela foi introduzida no HTML5 e permite que os desenvolvedores adicionem som sem depender de plugins externos, como o Flash. A tag < audio> suporta vários formatos de áudio, como MP3, Ogg e WAV.
@@ -164,4 +165,7 @@ O uso de múltiplas tags < source> dentro da tag < audio> permite que o desenvol
 
 ## Vídeo
 
+=======
+## - Audio
+>>>>>>> b00457853898b4b88bbd686356c2571ac07d0512:Estudo HTML & CSS/readme HTML/readmehtml.md
 
