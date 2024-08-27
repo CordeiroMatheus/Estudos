@@ -290,3 +290,279 @@ Use < div> para criar seções ou contêineres em uma página e < span> para est
 
 ## Listas
  
+As listas em HTML são usadas para organizar e exibir informações em um formato de lista. Existem três tipos principais de listas em HTML.
+
+### Listas ordenadas (< ol>)
+
+Uma lista que exibe itens em uma sequência numerada.
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+
+#### Atributo type
+
+type: Define o tipo de numeração (por exemplo, números, letras).
+
+<ol type="a">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+
+
+### Listas não ordenadas < ul>
+
+Uma lista não ordenada exibe itens com marcadores (bullets) e não segue uma sequência específica.
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+#### Atributo type
+
+type: Define o tipo de marcador (por exemplo, disco, círculo, quadrado).
+
+<ul style="list-style-type: square;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+### Listas de definição
+
+Uma lista de definição é usada para pares de termos e descrições, como em dicionários ou glossários.
+
+<dl>
+  <dt>Termo 1</dt>
+  <dd>Descrição do Termo 1</dd>
+  <dt>Termo 2</dt>
+  <dd>Descrição do Termo 2</dd>
+</dl>
+
+## Tabelas
+
+As tabelas no HTML são usadas para organizar e exibir dados em formato de grade, com linhas e colunas. Elas são criadas usando uma combinação de elementos HTML específicos.
+
+1. - < table>: Este é o elemento que define a tabela. Todos os outros elementos relacionados à tabela são filhos do < table>. 
+
+
+> < table> <br>
+>  <-- Outros elementos da tabela vão aqui --> <br>
+> < /table>
+
+2. - < tr>: Cada linha da tabela é definida com um elemento < tr>. Dentro de cada < tr>, você coloca células de dados ou de cabeçalho. 
+
+>< table> <br>
+>  < tr><br>
+>    <-- Células vão aqui --><br>
+>  < /tr><br>
+>< /table>
+
+3. - < th>: O elemento < th> define uma célula de cabeçalho em uma tabela. Essas células são normalmente exibidas em negrito e são centradas por padrão. Elas são usadas para descrever o conteúdo das colunas ou linhas.
+
+>< table><br>
+>  < tr><br>
+>    < th>Cabeçalho 1< /th><br>
+>    < th>Cabeçalho 2< /th><br>
+>  < /tr><br>
+>< /table>
+
+
+4. - < td>: O elemento < td> define uma célula de dados em uma tabela. Essas células contêm os dados da tabela.
+
+> < table><br>
+>  < tr><br>
+>    < td>Dado 1< /td><br>
+>    < td>Dado 2< /td><br>
+>  < /tr><br>
+> < /table>
+
+#### Exemplo "Completo"
+
+<table border="1">
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+  </tr>
+  <tr>
+    <td>João</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Maria</td>
+    <td>30</td>
+  </tr>
+</table>
+
+## Botões
+
+Botões em HTML são criados principalmente usando a tag < button> ou a tag < input> com o atributo type="button". Eles são usados em formulários, páginas da web e aplicativos para permitir que os usuários realizem ações, como enviar um formulário, iniciar um processo ou ativar um script.
+
+### < Button>
+
+> < button type="button">Clique aqui< /button>
+
+O botão criado com a tag < button> pode conter não apenas texto, mas também imagens e outros elementos HTML.
+O atributo type pode ter diferentes valores:
+
+button: Um botão genérico que não realiza nenhuma ação até que seja programado com JavaScript.
+
+submit: Envia o formulário que o contém.
+
+reset: Reseta os campos do formulário para seus valores iniciais.
+
+### < input>
+
+< input type="button" value="Clique aqui">
+
+O botão criado com a tag < input> é mais limitado do que a tag < button>, pois só pode conter texto, definido pelo atributo value.
+Também há outros tipos:
+
+submit: Envia o formulário. 
+
+#### Tipo Submit
+Este botão é usado para enviar dados de um formulário para um servidor. Quando clicado, o formulário é enviado ao servidor especificado no atributo action da tag < form>.
+
+>< input type="submit" value="Enviar">
+
+Reset: Reseta o formulário.
+
+#### Tipo Reset
+Este botão redefine todos os campos do formulário para seus valores iniciais.
+
+>< input type="reset" value="Redefinir">
+
+
+#### Tipo Checkbox e Radio
+
+Botões de rádio (< input type="radio">) permitem que o usuário selecione uma única opção em um grupo de opções.
+
+Checkbox (< input type="checkbox">) permite múltiplas seleções.
+
+<input type="radio" name="group" value="option1"> Opção 1
+
+<input type="checkbox" name="option" value="option2"> Opção 2
+
+
+## Formulários
+
+Formulários em HTML (HyperText Markup Language) são uma maneira fundamental de coletar dados do usuário em uma página da web. Eles permitem que os usuários insiram informações, como texto, opções, arquivos, entre outros, e enviem esses dados para um servidor para processamento.
+
+### Componentes de um formulário
+
+#### < form>:
+
+Atributos comuns:
+
+1. - action: Especifica a URL para a qual os dados do formulário serão enviados.
+
+2. - method: Define o método HTTP usado para enviar os dados (GET ou POST).
+
+#### Elementos de entrada (< input>)
+
+type="text": Campo de entrada de texto.
+
+type="email": Campo de entrada para emails (validações básicas de formato).
+
+type="password": Campo para senhas, onde o texto é oculto.
+
+type="submit": Botão que envia o formulário.
+
+type="radio": Botões de opção, permitindo escolher apenas uma entre várias opções.
+
+type="checkbox": Caixas de seleção, permitindo escolher várias opções.
+
+type="file": Permite o upload de arquivos.
+
+#### Rótulos (< label>)
+
+Associam textos descritivos aos campos de entrada. Melhoram a acessibilidade.
+
+#### Textarea (< textarea>)
+
+Usada para entradas de texto maiores, como comentários.
+
+#### Botões (< button>)
+
+Pode ser usado para enviar ou redefinir formulários. Pode conter HTML dentro dele, ao contrário de < input type="submit">.
+
+### Validação de Formulários
+
+Os formulários HTML podem incluir validação básica através de atributos como **required**, **minlength**, **maxlength**, **pattern**, etc. Isso ajuda a garantir que os dados enviados estejam no formato esperado.
+
+### Exemplo
+
+> < form action="/enviar_dados" method="post"><br>
+>  < label for="nome">Nome:< /label><br>
+>  < input type="text" id="nome" name="nome"><br>
+>  < label for="email">Email:< /label><br>
+>  < input type="email" id="email" name="email"><br>
+>  < input type="submit" value="Enviar"><br>
+> < /form>
+
+## Headers e Footers
+
+As tags < header> e < footer> são elementos estruturais usados no HTML para definir as seções de cabeçalho e rodapé dentro de um documento ou uma seção específica do conteúdo.
+
+### Header (< header>)
+
+A tag < header> é utilizada para agrupar introduções ou conteúdo de navegação. Ela pode conter elementos como:
+
+Logotipos
+
+Títulos (< h1>, < h2>, etc.)
+
+Menus de navegação (< nav>)
+
+Imagens de cabeçalho
+
+Botões ou links de chamada para ação (Call to Action - CTA)
+
+#### Exemplo de Header
+
+>< header><br>
+>    < img src="logo.png" alt="Logo da Empresa"><br>
+>    < h1>Bem-vindo ao Nosso Site< /h1><br>
+>    < nav><br>
+>        < ul><br>
+>            < li>< a href="#home">Home< /a>< /li><br>
+>            < li>< a href="#sobre">Sobre< /a>< /li><br>
+>            < li>< a href="#contato">Contato< /a>< /li><br>
+>        < /ul><br>
+>    < /nav><br>
+>< /header><br>
+
+
+### Footer (< footer>)
+
+A tag < footer> define o rodapé de uma página ou de uma seção. É comum encontrar dentro dela:
+
+Informações de contato
+
+Direitos autorais
+
+Links para políticas de privacidade ou termos de uso
+
+Links de redes sociais
+
+Informações de crédito (autores, etc.)
+
+#### Exemplo de Footer
+
+< footer><br>
+    < p>&copy; 2024 Minha Empresa. Todos os direitos reservados.< /p><br>
+    < nav><br>
+        < ul><br>
+            < li>< a href="#politica">Política de Privacidade< /a>< /li><br>
+            < li>< a href="#termos">Termos de Uso< /a>< /li><br>
+            < li>< a href="#contato">Contato< /a>< /li><br>
+        < /ul><br>
+    < /nav><br>
+    < p>Siga-nos nas redes sociais:< /p><br>
+    < a href="https://twitter.com/empresa">Twitter< /a><br> | 
+    < a href="https://facebook.com/empresa">Facebook< /a><br>
+< /footer><br>
+

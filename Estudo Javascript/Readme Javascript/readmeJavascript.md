@@ -375,3 +375,23 @@ A função slice em JavaScript é usada para extrair uma parte de uma string sem
 - Se fim for negativo, ele também é tratado como um índice a partir do final da string.
 
 ### Método Chaining
+
+O método chaining em JavaScript é uma técnica que permite encadear várias chamadas de métodos em uma única linha de código. Isso é possível porque muitos métodos retornam o próprio objeto ou outro objeto que permite a continuação do encadeamento.
+
+Exemplo:
+
+> let texto = "   JavaScript é incrível!   ";<br>
+>// Usando method chaining:<br>
+>let resultado = texto.trim().toUpperCase().replace("INCRÍVEL", "PODEROSO");<br>
+>console.log(resultado); // "JAVASCRIPT É PODEROSO!"
+
+Aqui está o que acontece em cada passo:
+
+trim(): Remove os espaços em branco no início e no final da string.
+
+toUpperCase(): Converte a string para letras maiúsculas.
+
+replace("INCRÍVEL", "PODEROSO"): Substitui a palavra "INCRÍVEL" por "PODEROSO".
+
+Todos esses métodos retornam uma string, permitindo que o próximo método seja chamado imediatamente na string retornada. Essa técnica melhora a legibilidade e a concisão do código.
+

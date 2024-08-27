@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+
+        <p>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required maxlength="15" placeholder="Digite seu nome">
+        </p>
+
+
+        <p>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" required minlength="6" maxlength="15" placeholder="Digite sua senha">
+        </p>
+
+        <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="usuario@gmail.com">
+        </p>
+
+
+        <p>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}">
+        </p>
+
+        <p>
+        <label for="data">Data:</label>
+        <input type="date" name="data" id="data">
+        </p>
+
+        <p>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" name="quantidade" id="quantidade" min="0" max="99" value="1">
+        </p>
+
+        <p>
+            <label for="sr">Sr.</label>
+            <input type="radio" name="titulo" id="sr" value="Sr.">
+        </p>
+
+        <p>
+            <label for="sra">Sra.</label>
+            <input type="radio" name="titulo" id="sra" value="Sra.">
+        </p>
+
+        <p>
+            <label for="phd">PhD.</label>
+            <input type="radio" name="titulo" id="phd" value="PhD.">
+        </p>
+
+        <p>
+            <label for="pagamento">Pagamento:</label>
+            <select name="pagamento" id="pagamento">
+                <option value="Mastercard">Mastercard</option>
+                <option value="Visa">Visa</option>
+                <option value="Pix">Pix</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="inscrever">Inscrever:</label>
+            <input type="checkbox" name="inscrever" id="inscrever">
+        </p>
+
+        <p>
+            <label for="comentario">Comentário:</label>
+            <textarea name="comentario" id="comentario" rows="3" cols="20"></textarea>
+        </p>
+
+        <p>
+            <label for="arquivo">Arquivo:</label>
+            <input type="file" name="arquivo" id="arquivo" accept="image/png, image/jpeg">
+        </p>
+
+        <p><input type="submit"></p>
+        <p><input type="reset"></p>
+    </form>
+</body>
+</html>
