@@ -126,7 +126,6 @@ Especificam a largura e a altura da imagem. Esses valores podem ser definidos em
 
 > < img src="imagem.jpg" alt="Uma bela paisagem" width="500" height="300">
 
-<<<<<<< HEAD:Estudo HTML & CSS/Estudo HTML & CSS/readme HTML/readmehtml.md
 ## Áudio
 
 A tag de áudio em HTML é usada para incorporar arquivos de áudio em uma página web. Ela foi introduzida no HTML5 e permite que os desenvolvedores adicionem som sem depender de plugins externos, como o Flash. A tag < audio> suporta vários formatos de áudio, como MP3, Ogg e WAV.
@@ -165,7 +164,129 @@ O uso de múltiplas tags < source> dentro da tag < audio> permite que o desenvol
 
 ## Vídeo
 
-=======
-## - Audio
->>>>>>> b00457853898b4b88bbd686356c2571ac07d0512:Estudo HTML & CSS/readme HTML/readmehtml.md
+A tag < video> em HTML é usada para incorporar vídeos em páginas da web. Essa tag permite que desenvolvedores adicionem vídeos diretamente no conteúdo de um site sem a necessidade de plugins externos, como o Flash.
 
+>   < video controls><br>
+>   < source src="caminho_do_video.mp4" type="video/mp4"><br>
+>   Seu navegador não suporta o elemento de vídeo.<br>
+>   < /video><br>
+
+### Atributos Comuns
+
+- src: Especifica o caminho do arquivo de vídeo. Geralmente, é usado dentro da tag < source>.
+
+- controls: Adiciona controles ao vídeo (play, pause, volume, etc.).
+
+- autoplay: Faz com que o vídeo comece a ser reproduzido automaticamente quando a página é carregada.
+
+- loop: Faz o vídeo reiniciar automaticamente quando terminar.
+
+- muted: Inicia o vídeo sem som.
+
+- width e height: Especificam as dimensões do vídeo em pixels.
+
+- poster: Define uma imagem a ser exibida antes do início da reprodução do vídeo.
+
+
+>   < video width="600" height="400" controls poster="imagem_poster.jpg"><br>
+>   < source src="video.mp4" type="video/mp4"><br>
+>   < source src="video.ogv" type="video/ogg"><br>
+>   < source src="video.webm" type="video/webm"><br>
+>   Seu navegador não suporta o elemento de vídeo.<br>
+>   < /video><br>
+
+## Favicons
+
+Os favicons (favorite icons) são pequenos ícones gráficos associados a uma página da web ou site. Eles são exibidos em locais como:
+
+- Guia do Navegador: Na aba do navegador ao lado do título da página.
+
+- Barra de Favoritos: Ao salvar a página nos favoritos.
+
+- Histórico de Navegação: Ao visualizar o histórico do navegador.
+
+- Tela de Início em Dispositivos Móveis: Quando uma página da web é adicionada à tela inicial de um dispositivo.
+
+### Como adicionar um favicon no site
+
+Para adicionar um favicon ao seu site, você deve incluir uma linha no < head> do seu documento HTML, especificando o caminho para o arquivo de ícone. O formato mais comum é o .ico, mas você também pode usar .png, .svg, .gif, entre outros.
+
+>< head><br>
+>    < link rel="icon" href="caminho/do/seu/favicon.ico" type="image/x-icon"><br>
+>< /head><br>
+
+### Tipos e formatos de favicons
+
+- .ico: Formato tradicional e amplamente suportado por todos os navegadores.
+
+- .png: Formato de imagem popular, especialmente para favicons de alta resolução.
+
+- .svg: Formato vetorial, ideal para ícones que precisam ser escalados para diferentes tamanhos.
+
+- .gif: Suporta animações, mas é menos comum para favicons.
+
+### Especificando Diferentes Tamanhos
+
+>< head><br>
+>    < link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"><br>
+>    < link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png"><br>
+>    < link rel="icon" href="favicon-96x96.png" sizes="96x96" type="image/png"><br>
+>< /head><br>
+
+
+## Formatando Textos
+
+A formatação de texto em HTML (Hypertext Markup Language) é feita usando uma variedade de elementos, conhecidos como tags, que definem como o texto deve ser exibido em um navegador.
+
+### **Cabeçalhos**
+
+Usados para títulos e subtítulos. Vão de < h1> (mais importante) a < h6> (menos importante).
+
+> < h1>Título Principal< /h1><br>  
+> < h2>Subtítulo< /h2><br>
+
+### **Parágrafos**
+
+Representam um bloco de texto.
+
+>< p>Este é um parágrafo< /p>
+
+### **Negrito e Itálico**
+
+Em negrito:
+
+> < b>Texto em negrito< /b>
+
+Em itálico:
+
+> < i>Texto em itálico< /i>
+
+### **Linhas**
+
+Usadas para dividir seções de conteúdo.
+
+> < hr> // cria uma linha
+
+Existem diversas outras maneiras de formatar texto com HTML.
+
+## Span & Div
+
+### Diferença entre Div e Span
+
+#### < Div>(division): 
+
+O < div> é um elemento de bloco (block-level element) usado para agrupar outros elementos HTML e criar seções em uma página. Ele ocupa toda a largura disponível do seu contêiner pai, começando em uma nova linha. 
+É amplamente utilizado para criar layouts de página, caixas, contêineres e para agrupar outros elementos HTML que precisam de um tratamento comum em termos de estilo ou comportamento.
+
+#### < Span>:
+
+O < span> é um elemento inline (inline-level element) usado para estilizar partes específicas do conteúdo dentro de um bloco de texto ou outro conteúdo inline. Diferente do < div>, ele não quebra a linha e só ocupa a largura necessária para o conteúdo que envolve.
+É ideal para aplicar estilos específicos a partes de um texto ou para aplicar scripts a trechos específicos do conteúdo sem afetar o layout ao redor.
+
+---
+Resumidamente O < div> cria um bloco que se estende por toda a largura disponível, enquanto o < span> apenas se estende pelo conteúdo que ele envolve.
+
+Use < div> para criar seções ou contêineres em uma página e < span> para estilizar partes do conteúdo dentro dessas seções.
+
+## Listas
+ 
