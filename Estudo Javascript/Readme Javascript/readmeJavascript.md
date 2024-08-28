@@ -24,6 +24,7 @@ texto - Link: Usado para criar um link clicável.
 -->
 
 # Javascript
+
 ## Sumário
 
 1. - [Variáveis](#variáveis)
@@ -35,6 +36,11 @@ texto - Link: Usado para criar um link clicável.
 7. - [Funções matemáticas](#funções-matemáticas)
 8. - [Números Aleatórios](#gerar-números-aleatórios)
 9. - [Métodos de String](#métodos-de-strings)
+10. - [Slice String](#slice-string)
+11. - [Método Chaining](#método-chaining)
+12. - [Condicional If](#condicional-if)
+13. - [Propriedade Checked](#propriedade-checked)
+14. - [Switch Case](#switch-case)
 
 ### Variáveis
 
@@ -394,4 +400,56 @@ toUpperCase(): Converte a string para letras maiúsculas.
 replace("INCRÍVEL", "PODEROSO"): Substitui a palavra "INCRÍVEL" por "PODEROSO".
 
 Todos esses métodos retornam uma string, permitindo que o próximo método seja chamado imediatamente na string retornada. Essa técnica melhora a legibilidade e a concisão do código.
+
+### Condicional If
+
+A condicional if em JavaScript é usada para executar um bloco de código apenas se uma condição específica for verdadeira. É uma das estruturas de controle mais fundamentais em programação, permitindo que seu código tome decisões com base em diferentes condições.
+
+**Sintaxe:**
+
+>if (condição) {<br>
+>  // bloco de código a ser executado se a condição for verdadeira<br>
+>}<br>
+
+Condição: Este é um valor ou uma expressão que será avaliada como true ou false. Se a condição for avaliada como true, o bloco de código dentro do if será executado. Se for avaliada como false, o bloco de código será ignorado.
+
+**If-Else**:
+
+Você também pode adicionar uma cláusula else para executar um bloco de código alternativo se a condição for false:
+
+
+>let idade = 16;<br>
+>if (idade >= 18) {<br>
+>  console.log("Você é maior de idade.");<br>
+>} else {<br>
+>  console.log("Você é menor de idade.");<br>
+>}
+
+Aqui, como a condição idade >= 18 é false, o código dentro do bloco else será executado, exibindo "Você é menor de idade."
+
+**If-Else If-Else**:
+
+Para verificar múltiplas condições, você pode usar else if:
+
+>let hora = 10;<br>
+>if (hora < 12) {<br>
+>  console.log("Bom dia!");<br>
+>} else if (hora < 18) {<br>
+>  console.log("Boa tarde!");<br>
+>} else {<br>
+>  console.log("Boa noite!");<br>
+>}
+
+**Importante:**
+
+Condições podem ser expressões complexas que envolvem operadores lógicos (&&, ||, etc.).
+O JavaScript trata alguns valores como "falsy" (como 0, "", null, undefined, e false), e eles serão avaliados como false dentro de uma condicional if.
+
+### Propriedade Checked
+
+A propriedade checked é usada para verificar ou definir o estado de uma caixa de seleção (< input type="checkbox">) ou de um botão de opção (< input type="radio">). Se a propriedade checked é true, o elemento está selecionado; se for false, não está. Você pode acessar ou modificar essa propriedade em JavaScript para manipular a seleção desses elementos em um formulário.
+
+Esse trecho vai ficar sem um código demonstrativo.
+
+### Switch Case
 
