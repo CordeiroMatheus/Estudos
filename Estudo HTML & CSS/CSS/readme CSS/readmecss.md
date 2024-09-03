@@ -100,10 +100,85 @@ Os comentários em CSS são usados para inserir notas que não são processadas 
 
 <code>/* Comentário em CSS */</code>
 
+### Incorporação do CSS
 
+Existem três formas principais de incorporar CSS em um documento HTML: in-line, interno (ou embutido) e externo. Cada uma tem suas vantagens e desvantagens, dependendo do contexto de uso.
 
+### 1. - CSS In-line: 
+O CSS in-line é aplicado diretamente em elementos HTML usando o atributo style. Cada elemento que requer estilização tem seus próprios estilos definidos diretamente dentro da tag HTML.
 
+Exemplo:
 
+> < p style="color: blue; font-size: 20px;">Este é um parágrafo estilizado in-line.< /p>
 
+> <p style="color: blue; font-size: 20px;">Este é um parágrafo estilizado in-line.</p>
+
+Vantagens: 
+
+- Fácil de aplicar
+- Não requer a criação de arquivos adicionais
+
+Desvantagens: 
+
+- Dificulta a manutenção, pois o estilo fica misturado com o conteúdo.
+- Difícil de reutilizar estilos em múltiplos elementos.
+- Pode aumentar o tamanho do código HTML.
+
+### CSS Interno (ou Embutido):
+O CSS interno é inserido dentro de uma tag < style> na seção < head> de um documento HTML. Todos os estilos definidos nesse bloco se aplicam apenas àquele documento específico.
+
+Exemplo: 
+
+< head><br>
+    < style><br>
+        p {<br>
+            color: blue;<br>
+            font-size: 20px;<br>
+        }<br>
+    < /style><br>
+< /head><br>
+< body><br>
+    < p>Este é um parágrafo estilizado com CSS interno.< /p><br>
+< /body><br>
+
+Vantagens: 
+
+- Útil para páginas únicas ou quando os estilos são exclusivos de uma página específica. 
+- Mantém o código HTML mais limpo em comparação com o uso de estilos in-line.
+
+Desvantagens: 
+
+- Não é reutilizável em outras páginas.
+- Pode tornar o código mais díficil de gerenciar em projetos maiores.
+
+### CSS Externo:
+
+O CSS externo é armazenado em um arquivo separado com extensão .css, que é vinculado ao documento HTML usando a tag < link> no < head>. Esse arquivo pode ser reutilizado em múltiplas páginas.
+
+Exemplo:
+
+< head><br>
+    < link rel="stylesheet" href="styles.css"><br>
+< /head><br>
+< body><br>
+    < p>Este é um parágrafo estilizado com CSS externo.< /p><br>
+< /body><br>
+
+Vantagens: 
+
+- Melhora a manutenção e organização do código.
+- Estilos podem ser reutilizados em várias páginas, garantindo consistência.
+- Reduz o tamanho dos arquivos HTML, já que o CSS fica separado.
+
+Desvantagens:
+
+- Requer a criação e o gerenciamento de arquivos adicionais.
+- Pode haver um pequeno atraso no carregamento inicial da página devido ao download do arquivo CSS.
+
+### Escolhendo o Tipo de CSS
+
+- In-line: Ideal para pequenas alterações ou quando você precisa de um estilo único para um elemento específico.
+- Interno: Útil para documentos únicos ou páginas com estilos que não serão compartilhados com outras páginas.
+- Externo: A melhor escolha para a maioria dos projetos, especialmente quando há necessidade de reutilização e manutenção de estilos em várias páginas.
 
 ## Cores

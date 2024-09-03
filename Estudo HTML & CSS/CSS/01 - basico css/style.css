@@ -1,0 +1,25 @@
+body{
+    background-color: #202020;
+}
+h1{
+    color: white
+}
+#p1{
+    color: red;
+}
+#p2{
+    color: green;
+}
+#p3{
+    color: dodgerblue;
+}
+#p4{
+    color: teal;
+}
+
+.odd{
+    background-color: rgb(8, 100, 0);
+}
+.even{
+    background-color: rgb(0, 50, 80);
+}

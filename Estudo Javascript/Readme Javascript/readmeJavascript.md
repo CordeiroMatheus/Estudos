@@ -453,3 +453,70 @@ Esse trecho vai ficar sem um código demonstrativo.
 
 ### Switch Case
 
+O switch é uma estrutura de controle de fluxo em JavaScript que permite executar diferentes blocos de código com base no valor de uma expressão. É uma alternativa ao uso de múltiplos if...else quando se quer comparar a mesma expressão com diferentes valores.
+
+<code>
+switch (expressão) {<br>
+  case valor1:<br>
+    // Código a ser executado se a expressão for igual a valor1<br>
+    break;<br>
+  case valor2:<br>
+    // Código a ser executado se a expressão for igual a valor2<br>
+    break;<br>
+  // Mais casos podem ser adicionados
+  default:<br>
+    // Código a ser executado se a expressão não corresponder a nenhum caso<br>
+}
+</code>
+
+Como funciona: 
+
+1. - Expressão: A expressão dentro do parênteses após a palavra-chave switch é avaliada.
+
+2. - Casos: O valor da expressão é comparado com cada valor após a palavra-chave case. Se houver uma correspondência, o código associado a esse case é executado.
+
+3. - break: A palavra-chave break é usada para sair do switch após a execução de um caso correspondente. Sem o break, o JavaScript continuará executando os casos subsequentes, mesmo se eles não corresponderem à expressão (comportamento conhecido como "fall-through").
+
+4. - default: A cláusula default é opcional e é executada se nenhum dos casos corresponder ao valor da expressão. Funciona como um else em uma estrutura if...else.
+
+Exemplo: 
+
+<code>
+let dia = 3;<br>
+let diaDaSemana;<br>
+
+switch (dia) {<br>
+  case 1:<br>
+    diaDaSemana = 'Domingo';<br>
+    break;<br>
+  case 2:<br>
+    diaDaSemana = 'Segunda-feira';<br>
+    break;<br>
+  case 3:<br>
+    diaDaSemana = 'Terça-feira';<br>
+    break;<br>
+  case 4:<br>
+    diaDaSemana = 'Quarta-feira';<br>
+    break;<br>
+  case 5:<br>
+    diaDaSemana = 'Quinta-feira';<br>
+    break;<br>
+  case 6:<br>
+    diaDaSemana = 'Sexta-feira';<br>
+    break;<br>
+  case 7:<br>
+    diaDaSemana = 'Sábado';<br>
+    break;<br>
+  default:<br>
+    diaDaSemana = 'Valor inválido';<br>
+}
+
+console.log(diaDaSemana); // Saída: "Terça-feira"
+</code>
+
+Neste exemplo, a variável dia é comparada com os valores definidos em cada case. Como dia é igual a 3, o código associado ao case 3 é executado, e a variável diaDaSemana recebe o valor "Terça-feira". A cláusula break impede que os outros casos sejam executados após a correspondência ser encontrada.
+
+Se a variável dia tivesse um valor que não correspondesse a nenhum dos casos, o código dentro da cláusula default seria executado.
+
+### Operadores lógicos
+
