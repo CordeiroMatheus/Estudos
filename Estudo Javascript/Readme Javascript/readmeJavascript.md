@@ -518,5 +518,48 @@ Neste exemplo, a variável dia é comparada com os valores definidos em cada cas
 
 Se a variável dia tivesse um valor que não correspondesse a nenhum dos casos, o código dentro da cláusula default seria executado.
 
-### Operadores lógicos
+### Operadores lógicos (AND, NOT e OR)
+
+**Operador Lógico And (&&):** Retorna true se as duas expressões forem verdadeiras.
+
+Descrição: Retorna true se ambas as expressões forem verdadeiras; caso contrário, retorna false.
+
+<code>
+
+let a = true<br>
+let b = false<br>
+
+console.log(a && b) // false<br>
+console.log(a && true) // true
+
+</code>
+
+
+**Operador Lógico Or (||):** Retorna true se pelo menos uma das expressões for verdadeira; retorna false apenas se ambas as expressões forem falsas.
+
+<code>
+
+let a = true;<br>
+let b = false;<br>
+
+console.log(a || b); // true<br>
+console.log(b || false); // false
+
+</code>
+
+
+
+**Operador Lógico Not (!):** Inverte o valor lógico de uma expressão. Se a expressão for true, retorna false, e vice-versa.
+
+<code>
+
+let a = true;<br>
+
+console.log(!a); // false<br>
+console.log(!false); // true
+
+</code>
+
+### Loops (While, Do-While, For)
+
 
