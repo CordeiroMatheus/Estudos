@@ -562,4 +562,214 @@ console.log(!false); // true
 
 ### Loops (While, Do-While, For)
 
+Em JavaScript, loops são estruturas de controle que permitem repetir um bloco de código várias vezes.
+
+#### While 
+
+O loop while executa um bloco de código enquanto uma condição for verdadeira. A condição é avaliada antes de cada iteração. Se a condição for falsa logo na primeira verificação, o bloco não é executado.
+
+**Sintaxe:**
+
+<code>
+while (condição) { <br>
+  // Código a ser executado enquanto a condição for verdadeira <br>
+}
+</code>
+
+**Exemplo:**
+
+<code>
+let contador = 0;<br>
+while (contador < 5) <br>
+{<br>
+  console.log(contador);<br>
+  contador++;<br>
+}
+</code>
+
+Neste exemplo, o valor de contador será exibido de 0 a 4. Quando contador atingir 5, a condição contador < 5 será falsa, e o loop terminará.
+
+#### Do-While
+
+O loop do-while é semelhante ao while, mas a diferença principal é que o bloco de código sempre será executado pelo menos uma vez, pois a condição é verificada depois da execução.
+
+**Sintaxe:**
+
+<code>
+do {<br>
+  // Código a ser executado<br>
+} while (condição);
+
+</code>
+
+**Exemplo:**
+
+<code>
+let contador = 0;<br>
+do {<br>
+  console.log(contador);<br>
+  contador++;<br>
+} while (contador < 5);
+
+</code>
+
+Aqui, o loop também irá imprimir os números de 0 a 4, mas o código dentro do do será executado ao menos uma vez, independentemente da condição.
+
+
+#### For
+
+O loop for é mais compacto e usado principalmente quando você sabe quantas vezes quer que o código seja executado. Ele inclui três partes principais: a inicialização, a condição e o incremento, tudo na mesma linha.
+
+**Sintaxe:**
+
+<code>
+for (inicialização; condição; incremento) { <br>
+  // Código a ser executado <br>
+}
+</code>
+
+**Exemplo:**
+
+<code>
+for (let i = 0; i < 5; i++) { <br>
+  console.log(i); <br>
+}
+</code>
+
+Neste exemplo, o valor de i será impresso de 0 a 4. A inicialização (let i = 0) ocorre uma vez no início, a condição (i < 5) é verificada antes de cada iteração, e o incremento (i++) é executado no final de cada ciclo.
+
+
+### Break e Continue
+
+Em JavaScript, as declarações break e continue são usadas para controlar o fluxo de loops, como for, while e do...while.
+
+**Break**
+
+A instrução break é usada para sair completamente do loop quando uma determinada condição é atendida. Isso interrompe a execução do loop e passa para a próxima linha de código após o loop.
+
+Exemplo com break:
+
+<code>
+for (let i = 0; i < 10; i++) { <br>
+  if (i === 5) { <br>
+    break; // Sai do loop quando i for 5 <br>
+  } <br>
+  console.log(i); // Vai imprimir de 0 até 4 <br>
+}
+</code>
+
+Neste exemplo, o loop for vai de 0 até 9, mas quando o valor de i é igual a 5, a declaração break faz o loop terminar, então só são impressos os números de 0 a 4.
+
+**Continue**
+
+A instrução continue é usada para pular a iteração atual do loop e passar para a próxima, sem interromper o loop inteiro. Ou seja, ele ignora o restante do código naquela iteração e volta para o topo do loop.
+
+Exemplo com continue:
+
+<code>
+for (let i = 0; i < 10; i++) { <br>
+  if (i === 5) { <br>
+    continue; // Pula a iteração quando i for 5 <br>
+  } <br>
+  console.log(i); // Vai imprimir todos os números de 0 a 9, exceto o 5 <br>
+}
+</code>
+
+Aqui, o loop continua normalmente, mas quando i é 5, o continue faz com que o loop pule essa iteração, então o número 5 não é impresso.
+
+Resumo:
+- break: Sai do loop completamente.
+- continue: Pula a iteração atual e continua o loop.
+
+### Loops Aninhados
+
+Loops aninhados em JavaScript são estruturas onde um loop é inserido dentro de outro loop. Eles são utilizados quando precisamos realizar operações repetitivas que envolvem múltiplas camadas de iteração, como ao trabalhar com matrizes bidimensionais (arrays de arrays) ou ao processar estruturas complexas.
+
+Aqui está um exemplo básico de loops aninhados:
+
+<code>
+for (let i = 0; i < 3; i++) {   // Loop externo <br>
+  console.log(`Loop externo: ${i}`); <br>
+   <br>
+  for (let j = 0; j < 2; j++) { // Loop interno <br>
+    console.log(`  Loop interno: ${j}`); <br>
+  } <br>
+}
+</code>
+
+Neste exemplo:
+
+O loop externo (variável i) itera 3 vezes.
+Dentro de cada iteração do loop externo, o loop interno (variável j) itera 2 vezes.
+
+### Funções
+
+Funções em JavaScript são blocos de código que realizam tarefas específicas ou calculam valores. Elas são fundamentais na linguagem, permitindo modularizar e reutilizar código de maneira eficiente.
+
+**Definindo funções**
+
+Existem diferentes formas de definir uma função em JavaScript:
+
+Declaração de Função (Function Declaration):
+
+<code>
+function saudacao(nome) { <br>
+  return `Olá, ${nome}!`; <br>
+}
+</code>
+
+Expressão de Função (Function Expression):
+
+<code>
+const saudacao = function(nome) { <br>
+  return `Olá, ${nome}!`; <br>
+};
+</code>
+
+Arrow Functions (Funções de Seta): Introduzidas no ES6, são mais concisas e geralmente usadas em funções curtas.
+
+<code>
+const saudacao = (nome) => `Olá, ${nome}!`;
+</code>
+
+ ---
+#### Parâmetros e Argumentos
+
+Parâmetros são variáveis usadas na definição de uma função, enquanto argumentos são os valores passados para esses parâmetros ao chamar a função. No exemplo saudacao(nome), nome é o parâmetro e "Matheus" seria o argumento ao chamá-la como saudacao("Matheus").
+
+#### Return
+
+O return em JavaScript é uma instrução usada dentro de funções para devolver um valor e encerrar a execução da função. Ao ser chamada, a função irá parar de rodar no ponto onde o return está, e o valor especificado após o return será "retornado" para onde a função foi chamada.
+
+Um exemplo básico:
+
+<code>
+function soma(a, b) { <br>
+    return a + b; <br>
+} <br>
+let resultado = soma(5, 3); // resultado vai ser 8 <br>
+console.log(resultado); // Saída: 8
+</code>
+
+<br>
+Neste exemplo, return a + b; encerra a função soma e devolve o resultado da soma de a e b.
+
+Alguns pontos importantes sobre return:
+
+Interrompe a execução da função: Qualquer código após return dentro de uma função não será executado.
+
+<code>
+function teste() { <br>
+    return "Olá!"; <br>
+    console.log("Isso nunca será executado."); <br>
+}
+</code>
+
+<br>
+
+Pode retornar qualquer tipo de valor: return pode devolver números, strings, arrays, objetos ou mesmo outras funções.
+
+Pode não retornar nada (undefined): Se return for usado sem valor, ou se não for usado, a função retornará undefined por padrão.
+
+### Operador Ternário
 
